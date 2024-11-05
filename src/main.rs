@@ -38,6 +38,6 @@ fn main() -> eframe::Result<()> {
     eframe::run_native(
         WINDOW_NAME,
         native_options,
-        Box::new(|cc| Box::new(app::SaveEditorApp::new(cc))),
+        Box::new(|cc| Ok(Box::new(app::SaveEditorApp::new(cc)))),
     )
 }
